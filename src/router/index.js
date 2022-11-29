@@ -5,6 +5,7 @@ import userCreate from '../components/userCreate.vue'
 import ancestorSearch from '../operation/ancestorSearch.vue'
 import traverseTree from '../operation/traverseTree.vue'
 import generationCount from '../operation/generationCount.vue'
+import getHuffman from '../operation/getHuffman.vue'
 
 const router=createRouter({
     history:createWebHistory(),
@@ -38,6 +39,11 @@ const router=createRouter({
                     path:'generationcount',
                     name:'generationCount',
                     component:generationCount
+                },
+                {
+                    path:'gethuffman',
+                    name:'getHuffman',
+                    component:getHuffman
                 }
             ]
         }

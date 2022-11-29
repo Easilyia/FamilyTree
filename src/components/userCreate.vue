@@ -8,7 +8,7 @@
         <el-button type="primary" plain @click="generationCount()">计算辈分差</el-button>
       </el-row>
       <el-row class="row-bg">
-        <el-button type="warning" plain>查看居住地的迁徙历史</el-button>
+        <el-button type="warning" plain @click="getHuffmanCode()">按年龄计算哈夫曼树</el-button>
         <el-button plain @click="reserve()">返回</el-button>
       </el-row>
     </div>
@@ -165,7 +165,7 @@ export default {
       this.name = listperson.name
       this.sex=listperson.sex
       this.birth=listperson.birth.substr(0,10)
-      this.death=listperson.death
+      this.death=listperson.death.substr(0,10)
       this.bloodType=listperson.bloodType
       this.region = listperson.region
     },
@@ -182,6 +182,9 @@ export default {
     },
     generationCount(){
       this.$router.push('/create/generationcount')
+    },
+    getHuffmanCode(){
+      this.$router.push('/create/gethuffman')
     }
   },
   mounted() {

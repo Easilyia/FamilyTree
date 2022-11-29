@@ -8,6 +8,6 @@ export const useStore = defineStore({
     root:'',
     pathName:'',
     wholeRoot:{}, //NodeTree[root]
-    nodeIndex:[]
+    nodeIndex:[] //层次
   }),
 })
